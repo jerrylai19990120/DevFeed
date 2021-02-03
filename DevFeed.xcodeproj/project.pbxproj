@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		926DC8C825CB1306008BC8D6 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8C725CB1306008BC8D6 /* ShadowView.swift */; };
 		926DC8CA25CB1417008BC8D6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8C925CB1417008BC8D6 /* AuthService.swift */; };
+		926DC8CC25CB37E7008BC8D6 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8CB25CB37E7008BC8D6 /* MeVC.swift */; };
 		92A5A3D225CAF637002BC5FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A5A3D125CAF637002BC5FA /* AppDelegate.swift */; };
 		92A5A3D425CAF637002BC5FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A5A3D325CAF637002BC5FA /* SceneDelegate.swift */; };
 		92A5A3D625CAF637002BC5FA /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A5A3D525CAF637002BC5FA /* FeedVC.swift */; };
@@ -28,6 +29,7 @@
 		8CB74B13CFEAA324FC1A3692 /* Pods_DevFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926DC8C725CB1306008BC8D6 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		926DC8C925CB1417008BC8D6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		926DC8CB25CB37E7008BC8D6 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		92A5A3CE25CAF637002BC5FA /* DevFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A5A3D125CAF637002BC5FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A5A3D325CAF637002BC5FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				92A5A3D725CAF637002BC5FA /* GroupsVC.swift */,
 				92A5A3F025CB0C03002BC5FA /* AuthVC.swift */,
 				92A5A3F225CB0C15002BC5FA /* LoginVC.swift */,
+				926DC8CB25CB37E7008BC8D6 /* MeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				92A5A3F525CB0C7F002BC5FA /* InsetTextField.swift in Sources */,
 				92A5A3D625CAF637002BC5FA /* FeedVC.swift in Sources */,
 				92A5A3D225CAF637002BC5FA /* AppDelegate.swift in Sources */,
+				926DC8CC25CB37E7008BC8D6 /* MeVC.swift in Sources */,
 				926DC8CA25CB1417008BC8D6 /* AuthService.swift in Sources */,
 				92A5A3D425CAF637002BC5FA /* SceneDelegate.swift in Sources */,
 				92A5A3EF25CAFC43002BC5FA /* DataService.swift in Sources */,

@@ -27,8 +27,8 @@ class AuthService {
     }
     
     func loginUser(withEmail email: String, andPassword password: String, completion: @escaping (_ status: Bool,_ error: Error?)->()){
-        Auth.auth().signIn(withEmail: email, link: password) { (result, error) in
-            guard let user = result?.user else {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
                 completion(false, error)
                 return
             }
