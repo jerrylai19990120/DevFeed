@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  AuthVC.swift
 //  DevFeed
 //
 //  Created by Jerry Lai on 2021-02-03.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class AuthVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
+    
 
 }
-
