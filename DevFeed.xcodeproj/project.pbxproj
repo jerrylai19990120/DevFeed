@@ -10,6 +10,14 @@
 		926DC8C825CB1306008BC8D6 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8C725CB1306008BC8D6 /* ShadowView.swift */; };
 		926DC8CA25CB1417008BC8D6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8C925CB1417008BC8D6 /* AuthService.swift */; };
 		926DC8CC25CB37E7008BC8D6 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8CB25CB37E7008BC8D6 /* MeVC.swift */; };
+		926DC8CE25CB4851008BC8D6 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8CD25CB4851008BC8D6 /* CreatePostVC.swift */; };
+		926DC8D025CB4FCF008BC8D6 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8CF25CB4FCF008BC8D6 /* UIViewExt.swift */; };
+		926DC8D225CB5C35008BC8D6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8D125CB5C35008BC8D6 /* FeedCell.swift */; };
+		926DC8D425CB6007008BC8D6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8D325CB6007008BC8D6 /* Message.swift */; };
+		926DC8D625CB6F27008BC8D6 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8D525CB6F27008BC8D6 /* CreateGroupsVC.swift */; };
+		926DC8D825CB723E008BC8D6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8D725CB723E008BC8D6 /* UserCell.swift */; };
+		926DC8DA25CB82CB008BC8D6 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8D925CB82CB008BC8D6 /* GroupCell.swift */; };
+		926DC8DC25CB8574008BC8D6 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DC8DB25CB8574008BC8D6 /* Group.swift */; };
 		92A5A3D225CAF637002BC5FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A5A3D125CAF637002BC5FA /* AppDelegate.swift */; };
 		92A5A3D425CAF637002BC5FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A5A3D325CAF637002BC5FA /* SceneDelegate.swift */; };
 		92A5A3D625CAF637002BC5FA /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A5A3D525CAF637002BC5FA /* FeedVC.swift */; };
@@ -30,6 +38,14 @@
 		926DC8C725CB1306008BC8D6 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		926DC8C925CB1417008BC8D6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		926DC8CB25CB37E7008BC8D6 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
+		926DC8CD25CB4851008BC8D6 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		926DC8CF25CB4FCF008BC8D6 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		926DC8D125CB5C35008BC8D6 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		926DC8D325CB6007008BC8D6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		926DC8D525CB6F27008BC8D6 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
+		926DC8D725CB723E008BC8D6 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		926DC8D925CB82CB008BC8D6 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		926DC8DB25CB8574008BC8D6 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		92A5A3CE25CAF637002BC5FA /* DevFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A5A3D125CAF637002BC5FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A5A3D325CAF637002BC5FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +130,8 @@
 				92A5A3F025CB0C03002BC5FA /* AuthVC.swift */,
 				92A5A3F225CB0C15002BC5FA /* LoginVC.swift */,
 				926DC8CB25CB37E7008BC8D6 /* MeVC.swift */,
+				926DC8CD25CB4851008BC8D6 /* CreatePostVC.swift */,
+				926DC8D525CB6F27008BC8D6 /* CreateGroupsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +141,9 @@
 			children = (
 				92A5A3F425CB0C7F002BC5FA /* InsetTextField.swift */,
 				926DC8C725CB1306008BC8D6 /* ShadowView.swift */,
+				926DC8D125CB5C35008BC8D6 /* FeedCell.swift */,
+				926DC8D725CB723E008BC8D6 /* UserCell.swift */,
+				926DC8D925CB82CB008BC8D6 /* GroupCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +151,7 @@
 		92A5A3E925CAF867002BC5FA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				926DC8CF25CB4FCF008BC8D6 /* UIViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +168,8 @@
 		92A5A3EB25CAF883002BC5FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				926DC8D325CB6007008BC8D6 /* Message.swift */,
+				926DC8DB25CB8574008BC8D6 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,15 +298,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926DC8D025CB4FCF008BC8D6 /* UIViewExt.swift in Sources */,
 				926DC8C825CB1306008BC8D6 /* ShadowView.swift in Sources */,
 				92A5A3F125CB0C03002BC5FA /* AuthVC.swift in Sources */,
 				92A5A3D825CAF637002BC5FA /* GroupsVC.swift in Sources */,
+				926DC8D825CB723E008BC8D6 /* UserCell.swift in Sources */,
 				92A5A3F325CB0C15002BC5FA /* LoginVC.swift in Sources */,
+				926DC8DC25CB8574008BC8D6 /* Group.swift in Sources */,
 				92A5A3F525CB0C7F002BC5FA /* InsetTextField.swift in Sources */,
 				92A5A3D625CAF637002BC5FA /* FeedVC.swift in Sources */,
+				926DC8D225CB5C35008BC8D6 /* FeedCell.swift in Sources */,
+				926DC8DA25CB82CB008BC8D6 /* GroupCell.swift in Sources */,
 				92A5A3D225CAF637002BC5FA /* AppDelegate.swift in Sources */,
 				926DC8CC25CB37E7008BC8D6 /* MeVC.swift in Sources */,
+				926DC8CE25CB4851008BC8D6 /* CreatePostVC.swift in Sources */,
 				926DC8CA25CB1417008BC8D6 /* AuthService.swift in Sources */,
+				926DC8D625CB6F27008BC8D6 /* CreateGroupsVC.swift in Sources */,
+				926DC8D425CB6007008BC8D6 /* Message.swift in Sources */,
 				92A5A3D425CAF637002BC5FA /* SceneDelegate.swift in Sources */,
 				92A5A3EF25CAFC43002BC5FA /* DataService.swift in Sources */,
 			);

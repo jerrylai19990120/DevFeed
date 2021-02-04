@@ -40,4 +40,106 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
+    func uploadPost(message: String, uid: String, groupKey: String?, completion: @escaping (_ status:Bool)->()){
+        if groupKey != nil {
+            
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderID": uid])
+            completion(true)
+        }
+    }
+    
+    func getAllFeedMessages(completion: @escaping (_ messages: [Message])->()){
+        var messageArray = [Message]()
+        REF_FEED.observeSingleEvent(of: .value) { (feedMessageSnapshot) in
+            guard let feedMessageSnapshot = feedMessageSnapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for feedMessage in feedMessageSnapshot {
+                let content = feedMessage.childSnapshot(forPath: "content").value as! String
+                let senderId = feedMessage.childSnapshot(forPath: "senderID").value as! String
+                
+                let message = Message(content: content, senderId: senderId)
+                messageArray.append(message)
+                
+            }
+            
+            completion(messageArray)
+        }
+    }
+    
+    func getUsername(uid: String, handler: @escaping (_ username: String)->()){
+        REF_USERS.observeSingleEvent(of: .value) { (snapshot) in
+            guard let userSnapshot = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for user in userSnapshot {
+                if user.key == uid {
+                    handler(user.childSnapshot(forPath: "email").value as! String)
+                }
+            }
+        }
+    }
+    
+    func getEmail(query: String, handler: @escaping (_ emailArray: [String])->()){
+        var emailArray = [String]()
+        REF_USERS.observeSingleEvent(of: .value) { (snapshot) in
+            guard let userSnapshot = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for user in userSnapshot {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                if email.contains(query) && email != Auth.auth().currentUser?.email{
+                    emailArray.append(email)
+                }
+            }
+            
+            handler(emailArray)
+        }
+    }
+    
+    func getIds(usernames: [String], handler: @escaping (_ uidArray: [String])->()){
+        REF_USERS.observeSingleEvent(of: .value) { (snapshot) in
+            guard let userSnapshots = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            var idArray = [String]()
+            for user in userSnapshots {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                if usernames.contains(email) {
+                    idArray.append(user.key)
+                }
+            }
+            
+            handler(idArray)
+        }
+    }
+    
+    func createGroup(title: String, description: String, ids: [String], handler: @escaping (_ status: Bool)->()) {
+        REF_GROUPS.childByAutoId().updateChildValues([
+            "title": title,
+            "description": description,
+            "members": ids
+        ])
+        handler(true)
+    }
+    
+    func getAllGroups(handler: @escaping (_ groups: [Group])->()){
+        
+        var groupArray = [Group]()
+        REF_GROUPS.observeSingleEvent(of: .value) { (snapshot) in
+            guard let groupSnapshot = snapshot.children.allObjects as? [DataSnapshot] else {return}
+            
+            for group in groupSnapshot {
+                let memberArray = group.childSnapshot(forPath: "members").value as! [String]
+                let title = group.childSnapshot(forPath: "title").value as! String
+                let desc = group.childSnapshot(forPath: "description").value as! String
+                
+                if memberArray.contains((Auth.auth().currentUser?.uid)!) {
+                    let group_1 = Group(title: title, description: desc, key: group.key, members: memberArray, memberCount: memberArray.count)
+                    groupArray.append(group_1)
+                }
+            }
+            
+            handler(groupArray)
+        }
+    }
+    
 }
