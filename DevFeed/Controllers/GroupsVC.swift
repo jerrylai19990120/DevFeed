@@ -32,7 +32,12 @@ class GroupsVC: UIViewController {
         
     }
 
-
+    @IBAction func addBtnPressed(_ sender: Any) {
+        guard let createGroupsVC = storyboard?.instantiateViewController(withIdentifier: "CreateGroupsVC") as? CreateGroupsVC else {return}
+        createGroupsVC.modalPresentationStyle = .fullScreen
+        present(createGroupsVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension GroupsVC: UITableViewDataSource, UITableViewDelegate {
