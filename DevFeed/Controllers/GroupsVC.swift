@@ -53,4 +53,11 @@ extension GroupsVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedVC") as? GroupFeedVC else {return}
+        groupFeedVC.initData(group: groupArray[indexPath.row])
+        presentDetail(groupFeedVC)
+    }
+    
 }
